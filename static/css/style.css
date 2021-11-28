@@ -1,0 +1,35 @@
+td{
+    border: 1px solid black;
+    padding: 10px;
+}
+
+body{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.box{
+    padding-right:100px ;
+    margin: 50px;
+}
+
+.edit, .update{
+    border-radius: 25px;
+    border: 2px solid fuchsia;
+    color: fuchsia;
+}
+
+.delete, .cancel{
+    border-radius: 25px;
+    border: 2px solid red;
+    color: red;
+}
+
+.sub{
+    border-radius: 25px;
+    border: 2px solid blue;
+    color: blue;
+}
+
+

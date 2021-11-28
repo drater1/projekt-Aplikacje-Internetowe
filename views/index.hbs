@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{!-- <link rel="stylesheet" href="../static/css/style.css"> --}}
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box">
+        <form action="/selected" method="get">
+        <table>
+            <tr>
+                <td>Ubezpieczony</td><td><input type="checkbox" name="ubezpieczony"></td>
+            </tr>
+            <tr>
+                <td>Benzyna</td><td><input type="checkbox" name="benzyna"></td>
+            </tr>
+            <tr>
+                <td>Uszkodzony</td><td><input type="checkbox" name="uszkodzony"></td>
+            </tr>
+            <tr>
+                <td>Napęd 4x4</td><td><input type="checkbox" name="naped4x4"></td>
+            </tr>
+        </table>
+        <button class="sub" type="submit" name="submit"> Dodaj do bazy </button>
+        
+    </form>
+    </div>
+    
+    <div class="box">
+        <table>
+            <tr>
+                <td></td>
+                <td>ubezpieczony</td>
+                <td>benzyna</td>
+                <td>uszkodzony</td>
+                <td>naped4x4</td>
+                <td></td>
+            </tr>
+            {{#each docsy}}
+                <tr>
+                    <td>{{@index}}</td>
+                    <td>{{ubezpieczony}}</td>
+                    <td>{{benzyna}}</td>
+                    <td>{{uszkodzony}}</td>
+                    <td>{{naped4x4}}</td>
+                    <td>
+                        <form action="/edit" method="get"><button class="edit" value="{{_id}}" name="editbutton">edit</button></form>
+                    </td>
+                    <td>
+                        <form action="/delete" method="get"><button class="delete" value="{{_id}}" name="deletebutton">delete</button></form>
+                    </td>
+                </tr>
+            {{/each}}
+        </table> 
+    </div>
+    
+
+</body>
+
+</html>
