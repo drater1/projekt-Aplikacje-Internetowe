@@ -54,7 +54,7 @@
                         <form action="/edit" method="get"><button class="edit" value="{{_id}}" name="editbutton">edit</button></form>
                     </td>
                     <td>
-                        <form action="/delete" method="get"><button class="delete" value="{{_id}}" name="deletebutton">delete</button></form>
+                        <form action="/delete" method="get"><button class="delete" value="{{_id}}" name="deletebutton" onclick="return confirm('Czy napewno chcesz usunąć ten rekord')">delete</button></form>
                     </td>
                 </tr>
             {{/each}}
